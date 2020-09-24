@@ -36,6 +36,9 @@ void Engine::run() {
     drawables.push_back(ball);
     movables.push_back(ball);
 
+    SDL_Surface *background = IMG_Load("../resources/creatures/football.jpg");
+    SDL_Texture *bgtexture = SDL_CreateTextureFromSurface(renderer, background);
+
     ObjectGroup *objgorup;
 
     ball->move(630,rand() % 470);
@@ -63,6 +66,7 @@ void Engine::run() {
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer, bgtexture, NULL, NULL);
         drawScore(score, renderer);
 //
 //        int playerx = sprite->getSpriteX();
@@ -135,17 +139,17 @@ Engine::~Engine() {
 }
 
 void Engine::drawScore(int score, SDL_Renderer* renderer){
-    TTF_Font* font = TTF_OpenFont("font/comicbd.ttf", 12);
+    TTF_Font* font = TTF_OpenFont("../resources/font/comicbd.ttf", 8);
     SDL_Color white = {255, 255, 255};
     std::stringstream sStream;
     sStream << "SCORE: " << score;
     SDL_Surface* msg_surface = TTF_RenderText_Solid(font, sStream.str().c_str(), white);
     SDL_Texture* msg = SDL_CreateTextureFromSurface(renderer, msg_surface);
     SDL_Rect msg_box;
-    msg_box.x = 100;
-    msg_box.y = 100;
-    msg_box.w = 100;
-    msg_box.h = 50;
+    msg_box.x = 0;
+    msg_box.y = 0;
+    msg_box.w = 400;
+    msg_box.h = 200;
     SDL_RenderCopy(renderer, msg, NULL, &msg_box);
 }
 
