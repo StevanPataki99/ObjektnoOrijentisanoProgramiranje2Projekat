@@ -110,6 +110,7 @@ CMakeFiles/Pong.dir/engine.cpp.o
  /usr/local/include/SDL2/SDL_thread.h
  /usr/local/include/SDL2/SDL_timer.h
  /usr/local/include/SDL2/SDL_touch.h
+ /usr/local/include/SDL2/SDL_ttf.h
  /usr/local/include/SDL2/SDL_version.h
  /usr/local/include/SDL2/SDL_video.h
  /usr/local/include/SDL2/begin_code.h
@@ -218,6 +219,7 @@ CMakeFiles/Pong.dir/main.cpp.o
  /usr/local/include/SDL2/SDL_thread.h
  /usr/local/include/SDL2/SDL_timer.h
  /usr/local/include/SDL2/SDL_touch.h
+ /usr/local/include/SDL2/SDL_ttf.h
  /usr/local/include/SDL2/SDL_version.h
  /usr/local/include/SDL2/SDL_video.h
  /usr/local/include/SDL2/begin_code.h

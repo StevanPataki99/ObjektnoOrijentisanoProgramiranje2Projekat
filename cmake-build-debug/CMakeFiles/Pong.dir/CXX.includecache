@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/stevanpataki/Desktop/Pong/ball.cpp
-ball.h
-/Users/stevanpataki/Desktop/Pong/ball.h
-iostream
--
-
 /Users/stevanpataki/Desktop/Pong/ball.h
 SDL.h
 -
@@ -31,8 +25,6 @@ engine.h
 /Users/stevanpataki/Desktop/Pong/engine.h
 objectgroup.h
 /Users/stevanpataki/Desktop/Pong/objectgroup.h
-iostream
--
 
 /Users/stevanpataki/Desktop/Pong/engine.h
 SDL.h
@@ -43,13 +35,21 @@ SDL_render.h
 -
 SDL_image.h
 -
+SDL_ttf.h
+-
 string
 -
 vector
 -
+iostream
+-
 fstream
 -
 istream
+-
+sstream
+-
+string
 -
 eventlistener.h
 /Users/stevanpataki/Desktop/Pong/eventlistener.h
@@ -721,6 +721,14 @@ SDL_error.h
 /usr/local/include/SDL2/SDL_error.h
 SDL_video.h
 /usr/local/include/SDL2/SDL_video.h
+begin_code.h
+/usr/local/include/SDL2/begin_code.h
+close_code.h
+/usr/local/include/SDL2/close_code.h
+
+/usr/local/include/SDL2/SDL_ttf.h
+SDL.h
+/usr/local/include/SDL2/SDL.h
 begin_code.h
 /usr/local/include/SDL2/begin_code.h
 close_code.h

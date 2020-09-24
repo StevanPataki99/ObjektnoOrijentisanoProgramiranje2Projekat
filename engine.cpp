@@ -1,6 +1,6 @@
 #include "engine.h"
 #include "objectgroup.h"
-#include <iostream>
+
 
 Engine::Engine(std::string title) {
     SDL_Init(SDL_INIT_VIDEO);
@@ -63,6 +63,7 @@ void Engine::run() {
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
+        drawScore(score, renderer);
 //
 //        int playerx = sprite->getSpriteX();
 //        int playery = sprite->getSpriteY();
@@ -112,9 +113,11 @@ void Engine::run() {
 
         player1->frameCollide();
 
+
         for (int i = 0; i < drawables.size(); ++i) {
             drawables[i]->draw(renderer);
         }
+
 
         SDL_RenderPresent(renderer);
 
@@ -130,5 +133,23 @@ Engine::~Engine() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
+
+void Engine::drawScore(int score, SDL_Renderer* renderer){
+    TTF_Font* font = TTF_OpenFont("font/comicbd.ttf", 12);
+    SDL_Color white = {255, 255, 255};
+    std::stringstream sStream;
+    sStream << "SCORE: " << score;
+    SDL_Surface* msg_surface = TTF_RenderText_Solid(font, sStream.str().c_str(), white);
+    SDL_Texture* msg = SDL_CreateTextureFromSurface(renderer, msg_surface);
+    SDL_Rect msg_box;
+    msg_box.x = 100;
+    msg_box.y = 100;
+    msg_box.w = 100;
+    msg_box.h = 50;
+    SDL_RenderCopy(renderer, msg, NULL, &msg_box);
+}
+
+
+
 
 

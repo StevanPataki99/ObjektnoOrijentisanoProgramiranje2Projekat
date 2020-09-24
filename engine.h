@@ -4,10 +4,14 @@
 #include <SDL_video.h>
 #include <SDL_render.h>
 #include <SDL_image.h>
+#include <SDL_ttf.h>
 #include <string>
 #include <vector>
+#include <iostream>
 #include <fstream>
 #include <istream>
+#include <sstream>
+#include <string>
 #include "eventlistener.h"
 #include "drawable.h"
 #include "movable.h"
@@ -28,6 +32,8 @@ public:
     void run();
     virtual  ~Engine();
 
+    void drawScore(int rezultat, SDL_Renderer* renderer);
+
 private:
     SDL_Window *window;
     SDL_Renderer *renderer;
@@ -38,3 +44,5 @@ private:
     std::vector<Drawable*> drawables;
     std::vector<Movable*> movables;
 };
+
+//void drawScore(int score, SDL_Renderer* renderer);
