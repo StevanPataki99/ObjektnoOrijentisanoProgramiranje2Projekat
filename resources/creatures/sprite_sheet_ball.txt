@@ -1,0 +1,2 @@
+../resources/creatures/ball.png
+ball    1   0 0 16 16

@@ -1,0 +1,3 @@
+/Users/stevanpataki/Desktop/Pong/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/stevanpataki/Desktop/Pong/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/stevanpataki/Desktop/Pong/cmake-build-debug/CMakeFiles/Pong.dir
